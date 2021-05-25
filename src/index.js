@@ -13,6 +13,7 @@ export { default as isNonEmptyArray } from './is-non-empty-array';
 export { default as insertAtIndex } from './insert-at-index';
 export { default as isPositionCenter } from './is-position-center';
 export { default as jsonify } from './jsonify';
+export { default as multiSelectItems } from './multi-select-items';
 export { default as positionToClassName } from './position-to-class-name';
 export { default as removeAtIndex } from './remove-at-index';
 export { default as selectOptions } from './select-options';
