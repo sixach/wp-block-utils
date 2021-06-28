@@ -3,7 +3,7 @@
  *
  * @ignore
  */
-import { forOwn, snakeCase, toLower } from 'lodash';
+import { forOwn, isEmpty, isPlainObject, isString, snakeCase, toLower } from 'lodash';
 
 /**
  * Generate shortcode.
@@ -20,11 +20,17 @@ import { forOwn, snakeCase, toLower } from 'lodash';
  * // => string '[sixa_teams posts="1,2" number="2"]'
  */
 const shortcode = ( tagName, attributes ) => {
-	let tag = `[${ snakeCase( tagName ) }`;
-	forOwn( attributes, ( value, key ) => {
-		tag += ` ${ toLower( snakeCase( key ) ) }="${ value }"`;
-	} );
-	tag += ']';
+	let tag = '';
+
+	if ( isString( tagName ) && ! isEmpty( tagName ) ) {
+		tag += `[${ snakeCase( tagName ) }`;
+		if ( isPlainObject( attributes ) ) {
+			forOwn( attributes, ( value, key ) => {
+				tag += ` ${ toLower( snakeCase( key ) ) }="${ value }"`;
+			} );
+		}
+		tag += ']';
+	}
 
 	return tag;
 };
