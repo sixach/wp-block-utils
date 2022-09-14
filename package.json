@@ -46,9 +46,9 @@
 	},
 	"dependencies": {
 		"@wordpress/api-fetch": "5.2.7",
-		"@wordpress/html-entities": "3.16.0",
-		"@wordpress/i18n": "4.16.0",
-		"@wordpress/url": "3.17.0",
+		"@wordpress/html-entities": "3.17.0",
+		"@wordpress/i18n": "4.17.0",
+		"@wordpress/url": "3.18.0",
 		"classnames": "2.3.2",
 		"lodash": "4.17.21",
 		"rename-keys": "2.0.1",
